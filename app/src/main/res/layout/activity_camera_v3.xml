@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <FrameLayout
+        android:id="@+id/preview_layout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#090909">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView_v3"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView_v3_grid"
+            android:layout_gravity="left|bottom"
+            android:src="@drawable/grid" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/preview_layout">
+
+        <ImageButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/capture"
+            android:src="@drawable/camera"
+            android:background="@drawable/empty"
+            android:layout_gravity="center"
+            android:cropToPadding="true"
+            android:onClick="onClickPhoto">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRight"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/btnright"
+            android:onClick="onClickNavi"
+            android:contentDescription="@string/btnRight"
+            android:background="@drawable/empty"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLeft"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/btnleft"
+            android:onClick="onClickNavi"
+            android:contentDescription="@string/btnLeft"
+            android:background="@drawable/empty"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/preview_layout"
+        android:layout_alignParentTop="true"
+        android:id="@+id/frameLayout">
+
+        <TextView
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="Patient name:"
+            android:id="@+id/textPatientName"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="#ffcfefff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date:"
+            android:id="@+id/textDate"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="#ffcfefff" />
+    </FrameLayout>
+
+</RelativeLayout>
